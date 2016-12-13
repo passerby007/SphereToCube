@@ -78,9 +78,9 @@ class UnitSphere:
         self.TexturePath = texPath
         texImg = Image.open(texPath)
         print("loading %s %s" %(texPath, str(texImg.size)))
-        d = texImg.getdata()
+        # d = texImg.getdata()
 
-        self.PixelBuffer = list(d)
+        self.PixelBuffer = texImg.getdata()
         self.ImageW = texImg.size[0]
         self.ImageH = texImg.size[1]
 
